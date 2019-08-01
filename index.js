@@ -29,6 +29,10 @@ client.once('ready', () => {
     client.user.setActivity("Rules!", {type: "STREAMING"});
 })
 
+client.on('guildMemberAdd', (guildMember) => {
+   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "member"));
+}
+
 client.on('message', message => {
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
@@ -36,8 +40,6 @@ client.on('message', message => {
     let commandfile = client.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(client,message,args);
     console.log(`${message.author.tag}(ID:${message.author.id}): ${message.content}`);
-    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "ew"));
-
    
 
 })
