@@ -1,0 +1,16 @@
+{
+  "name": "Voidbot",
+  "version": "1.0.0",
+  "description": "Bot by Void.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Void",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "ms": "^2.1.2"
+  }
+}
