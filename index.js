@@ -26,7 +26,6 @@ fs.readdir("./commands/", (err, files) => {
 
 client.once('ready', () => {
     console.log(`${client.user.username}, at your service!`)
-    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "ew"));
     client.user.setActivity("Rules!", {type: "STREAMING"});
 })
 
@@ -37,6 +36,7 @@ client.on('message', message => {
     let commandfile = client.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(client,message,args);
     console.log(`${message.author.tag}(ID:${message.author.id}): ${message.content}`);
+    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "ew"));
 
    
 
