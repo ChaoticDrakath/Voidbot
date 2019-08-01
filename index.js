@@ -40,4 +40,4 @@ client.on('message', message => {
    
 
 })
-process.env.token
+client.login(process.env.token);
