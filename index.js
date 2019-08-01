@@ -29,7 +29,7 @@ client.once('ready', () => {
     client.user.setActivity("Rules!", {type: "STREAMING"});
 })
 
-client.on('guildMemberAdd', (guildMember) => {
+client.on('guildMemberAdd', (guildMember)) => {
    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "member"));
 }
 
