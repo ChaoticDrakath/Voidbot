@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
     
     try {
         await message.channel.send("Voidguard is going offduty!")
-        process.exit()      
+        client.logout()      
     } catch(e) {
         message.channel.send("ERROR: ${e.message}")
     }
