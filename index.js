@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 
 client.once('ready', () => {
     console.log(`${client.user.username}, at your service!`)
-    client.user.setActivity("Rules!", {type: "STREAMING"});
+    client.user.setActivity("Vhelp", {type: "STREAMING"});
 })
 
 client.on('message', message => {
