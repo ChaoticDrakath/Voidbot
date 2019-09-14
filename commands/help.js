@@ -6,9 +6,8 @@ module.exports.run = async (client, message, args) => {
     let useracommands = new Discord.RichEmbed()
     .setAuthor('Help', 'https://i.imgur.com/NXWBmum.png')
     .setThumbnail(bicon)
-    .setDescription("All commands are listed below.")
     .setColor("#980aab")
-    .addField("", "Vbotinfo - info of about VoidGuard\nVserverinfo - info about this server\nVhelp - gives help")
+    .addField("Commands:", "Vbotinfo - info of about VoidGuard\nVserverinfo - info about this server\nVhelp - gives help")
 
     return message.channel.send(useracommands);
    }
