@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     .setAuthor('Help', 'https://i.imgur.com/NXWBmum.png')
     .setThumbnail(bicon)
     .setColor("#980aab")
-    .addField("Commands:", "Vbotinfo - info of about VoidGuard\nVserverinfo - info about this server\nVhelp - gives help")
+    .addField("Commands:", "Vbotinfo - info of about VoidGuard\nVserverinfo - info about this server\nVhelp - gives help\nVmodhelp - Moderator accessible commands")
 
     return message.channel.send(useracommands);
    }
