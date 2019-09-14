@@ -15,5 +15,5 @@ module.exports.run = async (client, message, args) => {
    }else message.channel.send("u aren't powerful enough to access this area!")
 }
 module.exports.help = {
-    name: "mac"
+    name: "modhelp"
 }
