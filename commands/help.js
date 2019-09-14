@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
     .setThumbnail(bicon)
     .setDescription("All commands are listed below.")
     .setColor("#980aab")
-    .addField("User accessible commands", "Vbotinfo - info of about VoidGuard\nVserverinfo - info about this server\nVhelp - gives help")
+    .addField("", "Vbotinfo - info of about VoidGuard\nVserverinfo - info about this server\nVhelp - gives help")
 
     return message.channel.send(useracommands);
    }
