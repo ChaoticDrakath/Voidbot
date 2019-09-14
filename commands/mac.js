@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
     .setThumbnail(bicon)
     .setDescription("This command shows Voidguard's moderator accessible commands.")
     .setColor("#980aab")
-    .addField("moderator acccessible commands", "Vban [@user] - bans mentioned user!\nVsay [#channel] [message] - Administrator only command!(mentioning channel is optional)\nVclear [amount] - clears chat\nVkick [@user] - kicks mentioned user!\nVbotinfo - info of about VoidGuard\nVserverinfo - info about this server\nVcommands - commands subsection\nVuac - user accessible commands\nVmac - Moderator accessible commands (moderator role required!)!")
+    .addField("moderator acccessible commands", "Vban [@user] - bans mentioned user!\nVsay [#channel] [message] - Administrator only command!(mentioning channel is optional)\nVclear [amount] - clears chat\nVkick [@user] - kicks mentioned user!\nVbotinfo - info of about VoidGuard\nVserverinfo - info about this server\nVhelp - shows all usable commands")
 
     return message.channel.send(moderatoracommands);
    }else message.channel.send("u aren't powerful enough to access this area!")
