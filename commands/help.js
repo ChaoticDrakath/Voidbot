@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
     .setColor("#980aab")
     .addField("Commands:", "Vbotinfo - info of about VoidGuard\nVserverinfo - info about this server\nVhelp - gives help\nVmodhelp - Moderator accessible commands")
 
-    return message.user.send(useracommands);
+    return message.author.send(useracommands);
    }
 
 module.exports.help = {
