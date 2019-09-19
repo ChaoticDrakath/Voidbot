@@ -1,2 +1,2 @@
 # Voitbotbackup
-alpha 1.0
+alpha 2.0
