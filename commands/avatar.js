@@ -3,9 +3,8 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 
     if (!message.mentions.users.size) {
-    let avatar = message.member.displayAvatarURL;
     let userimage = new Discord.RichEmbed()
-    .setAuthor('Avatar', '${avatar}')
+    .setAuthor('Avatar', message.member.displayAvatarURL)
     .setColor("#980aab")
     .setImage(message.member.displayAvatarURL)
     return message.channel.send(userimage);
