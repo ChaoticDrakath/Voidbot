@@ -2,8 +2,13 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-		if (!message.mentions.users.size) {
-			return message.channel.send(`Your avatar: <${message.author.displayAvatarURL}>`);
+    if (!message.mentions.users.size) {
+    let avatar = message.author.displayAvatarURL;
+    let userimage = new Discord.RichEmbed()
+    .setAuthor('Avatar', '${avatar}')
+    .setColor("#980aab")
+    .addField("${avatar}")
+    return message.channel.send(userimage);
 		}
 
 		const avatarList = message.mentions.users.map(user => {
