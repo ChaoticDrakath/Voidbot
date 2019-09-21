@@ -4,9 +4,9 @@ module.exports.run = async (client, message, args) => {
 
     if (!message.mentions.users.size) {
     let userimage = new Discord.RichEmbed()
-    .setAuthor('Avatar', message.member.displayAvatarURL)
+    .setAuthor('Avatar', message.author.displayAvatarURL)
     .setColor("#980aab")
-    .setImage(message.member.displayAvatarURL)
+    .setImage(message.author.displayAvatarURL)
     return message.channel.send(userimage);
 		}
 
