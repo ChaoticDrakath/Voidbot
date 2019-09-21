@@ -30,7 +30,7 @@ client.once('ready', () => {
 })
 
 client.on('serverNewMember', function(server, user) {
-     user.addTo(server.roles.get("name", "ew"));
+     user.addTo(server.roles.get("name", "New Recruits"));
 });
 
 client.on('message', message => {
