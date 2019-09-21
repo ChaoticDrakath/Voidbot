@@ -11,8 +11,7 @@ module.exports.run = async (client, message, args) => {
         message.guild.members.get(userID).setNickname("test", "nick command executed");
         message.channel.send(`Successfully changed ${args[0]}'s nickname to "${message.channel.server.detailsOf(args[0]).nick}"`);
     }
-});
-}}
+}
 
 module.exports.help = {
     name: "nick"
