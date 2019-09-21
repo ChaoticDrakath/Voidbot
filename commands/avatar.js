@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 
     if (!message.mentions.users.size) {
-    let avatar = message.author.displayAvatarURL;
+    let avatar = message.member.displayAvatarURL;
     let userimage = new Discord.RichEmbed()
     .setAuthor('Avatar', '${avatar}')
     .setColor("#980aab")
