@@ -29,6 +29,10 @@ client.once('ready', () => {
     client.user.setActivity("Vhelp", {type: "STREAMING"});
 })
 
+client.on('serverNewMember', function(server, user) {
+     user.addTo(server.roles.get("name", "ew"));
+});
+
 client.on('message', message => {
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
