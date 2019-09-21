@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
 
     let avatarList = message.mentions.users.map(user => {
     let tagimage = new Discord.RichEmbed()
-    .setAuthor("${user.username}'s avatar:", user.displayAvatarURL)
+    .setAuthor(`${user.username}'s avatar:`, user.displayAvatarURL)
     .setColor("#980aab")
     .setImage(user.displayAvatarURL)
     return message.channel.send(tagimage);
