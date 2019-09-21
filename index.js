@@ -29,10 +29,6 @@ client.once('ready', () => {
     client.user.setActivity("Vhelp", {type: "STREAMING"});
 })
 
-client.on('guildMemberAdd', (guildMember)) => {
-   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "ew"));
-}
-
 client.on('message', message => {
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
