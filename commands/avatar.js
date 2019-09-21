@@ -10,11 +10,14 @@ module.exports.run = async (client, message, args) => {
     return message.channel.send(userimage);
 		}
 
-		const avatarList = message.mentions.users.map(user => {
-			return `${user.username}'s avatar: <${user.displayAvatarURL}>`;
+    let avatarList = message.mentions.users.map(user => {
+    let tagimage = new Discord.RichEmbed()
+    .setAuthor("${user.username}'s avatar:", user.displayAvatarURL)
+    .setColor("#980aab")
+    .setImage(user.displayAvatarURL)
+    return message.channel.send(tagimage);
 		});
 
-		message.channel.send(avatarList);
 	};
     
 
