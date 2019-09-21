@@ -40,7 +40,7 @@ client.on('message', message => {
 
 })
 
-client.on('guildMemberAdd', (guildMember)) => {
+client.on('guildMemberAdd', (guildMember) => {
    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "ew"));
 };
 
