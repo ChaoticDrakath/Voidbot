@@ -41,7 +41,7 @@ client.on('message', message => {
 })
 
 client.on('guildMemberAdd', (guildMember) => {
-   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "ew"));
+   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "New Recruits"));
 })
 
 client.login(process.env.token);
