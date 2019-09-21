@@ -42,7 +42,7 @@ client.on('message', message => {
 
 client.on('guildMemberAdd', (guildMember) => {
    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "New Recruits"));
-   console.log(`Gave joinrole to ${guildMember.user}`);
+   console.log(`Gave joinrole to ${guildMember.}`);
 })
 
 client.login(process.env.token);
