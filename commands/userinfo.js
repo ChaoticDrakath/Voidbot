@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) => {
             embed.addField('Currently playing', stripIndents`**> Name:** ${member.user.presence.game.name}`);
 
         message.channel.send(embed);
-    }else message .channel send("You don't have required permissions to access this command!");
+    }else message .channel.send("You don't have required permissions to access this command!");
 }
 
 module.exports.help = {
