@@ -8,7 +8,8 @@ module.exports.run = async (client, message, args) => {
         member.ban().then((member) => {
             message.channel.send(":spy: " + member.displayName + "has been banned!")
         })
-    }else message.channel.send("u didn't mention anyone!")}
+    }else message.channel.send("u didn't mention anyone!");
+  }else message .channel.send("You don't have required permissions to access this command!");
 }  
 
 module.exports.help = {
