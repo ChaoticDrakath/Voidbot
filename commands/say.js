@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    if(message.member.hasPermission(["MANAGE_MESSAGES", "ADMINISTRATOR"])){
+    if(message.member.hasPermission(["SEND_MESSAGES"])){
 
     let argsresult;
     let mChannel = message.mentions.channels.first()
