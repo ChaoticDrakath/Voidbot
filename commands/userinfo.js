@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
         .addField('Joined at:', `${moment.utc(member..joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
         .addField('Status:', member..presence.status, true)
         .addField('Roles:', member.roles.map(r => `${r}`).join(' | '), true)
-        .setFooter(`ID: ${member..id}`)
+        .setFooter(`ID: ${member.id}`)
         .setTimestamp();
 
     message.channel.send({ embed: embed });
