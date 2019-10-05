@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
         argsresult = args.join(" ")
         message.channel.send(argsresult)
     }
-}}
+}}}
 
 module.exports.help = {
     name: "say"
