@@ -3,7 +3,8 @@ const moment = require('moment');
 
 module.exports.run = async (bot, message, args) => {
 
-    let member = message.mentions.users.first() || message.author;
+    let user = message.mentions.users.first() || message.author;
+    let member = message.mention.users.first() message.author;
     const joinDiscord = moment(user.createdAt).format('llll');
     const joinServer = moment(user.joinedAt).format('llll');
     let embed = new Discord.RichEmbed()
@@ -11,9 +12,9 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(`${user}`)
         .setColor(`RANDOM`)
         .setThumbnail(`${user.displayAvatarURL}`)
-        .addField('Joined at:', `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
         .addField('Status:', user.presence.status, true)
-        .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
+        .addField('Roles:', member.roles.map(r => `${r}`).join(' | '), true)
         .setFooter(`ID: ${user.id}`)
         .setTimestamp();
 
