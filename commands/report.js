@@ -39,7 +39,6 @@ module.exports.run = async (client, message, args) => {
 
         return channel.send(embed);
     }
-}
 
 module.exports.help = {
     name: "report"
