@@ -4,7 +4,7 @@ const { getMember, formatDate } = require("../functions.js");
 
 module.exports.run = async (client, message, args) => {
         
-        if(message.member.hasPermission(["ADMINISTRATOR"])){
+        if(message.member.hasPermission(["MANAGE_MESSAGES"])){
 
         const member = getMember(message, args.join(" "));
 
