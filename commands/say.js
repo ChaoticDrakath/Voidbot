@@ -15,7 +15,8 @@ module.exports.run = async (client, message, args) => {
         argsresult = args.join(" ")
         message.channel.send(argsresult)
     }
-}}
+  }else message .channel.send("You don't have required permissions to access this command!");
+}
 
 
 module.exports.help = {
