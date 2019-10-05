@@ -7,7 +7,8 @@ module.exports.run = async (client, message, args) => {
     let text = msg.content
     msg.guild.members.forEach(member => {
       if (member.id != client.user.id && !member.user.bot) member.send(text);
-}}});
+})
+}}
 
                                       
 
