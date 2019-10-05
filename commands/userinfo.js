@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
         .setAuthor(member.username + '#' + member.discriminator, member.displayAvatarURL)
         .setDescription(`${member}`)
         .setColor(`RANDOM`)
-        .setThumbnail(`${member..displayAvatarURL}`)
+        .setThumbnail(`${member.displayAvatarURL}`)
         .addField('Joined at:', `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
         .addField('Status:', member.presence.status, true)
         .addField('Roles:', member.roles.map(r => `${r}`).join(' | '), true)
