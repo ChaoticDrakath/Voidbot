@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const ms = require("ms");
 module.exports.run = async (client, message, args) => {
 
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if(!tomute) return message.reply("Couldn't find user.");
   if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
@@ -60,7 +60,7 @@ module.exports.run = async (client, message, args) => {
     tomute.removeRole(muterole.id);
   }, ms(mutetime));
 
-
+}else message .channel.send("You don't have required permissions to access this command!");
 //end of module
 }
 
