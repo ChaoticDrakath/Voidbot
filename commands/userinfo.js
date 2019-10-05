@@ -3,6 +3,8 @@ const { stripIndents } = require("common-tags");
 const { getMember, formatDate } = require("../functions.js");
 
 module.exports.run = async (client, message, args) => {
+        
+        if(message.member.hasPermission(["ADMINISTRATOR"])){
 
         const member = getMember(message, args.join(" "));
 
@@ -36,6 +38,7 @@ module.exports.run = async (client, message, args) => {
 
         message.channel.send(embed);
     }
+}
 
 module.exports.help = {
     name: "userinfo"
