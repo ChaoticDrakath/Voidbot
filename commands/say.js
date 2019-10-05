@@ -1,9 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
-
-    const userID = '<@471988330335174667>'
-    if(!message.author === userID) {
+    
     if(message.member.hasPermission(["ADMINISTRATOR"])){
 
     let argsresult;
@@ -17,7 +15,7 @@ module.exports.run = async (client, message, args) => {
         argsresult = args.join(" ")
         message.channel.send(argsresult)
     }
-}}}
+}}
 
 module.exports.help = {
     name: "say"
