@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
-
+           
+if(message.member.hasPermission(["ADMINISTRATOR"])){
 
             let sicon = message.guild.iconURL;
             let serverembed = new Discord.RichEmbed()
@@ -15,7 +16,7 @@ module.exports.run = async (client, message, args) => {
         
             return message.channel.send(serverembed);
            }
-
+}
 
 module.exports.help = {
     name: "serverinfo"
