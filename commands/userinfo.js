@@ -7,12 +7,12 @@ module.exports.run = async (bot, message, args) => {
     const joinDiscord = moment(member.createdAt).format('llll');
     const joinServer = moment(member.joinedAt).format('llll');
     let embed = new Discord.RichEmbed()
-        .setAuthor(member..username + '#' + member..discriminator, member..displayAvatarURL)
+        .setAuthor(member..username + '#' + member.discriminator, member..displayAvatarURL)
         .setDescription(`${member}`)
         .setColor(`RANDOM`)
         .setThumbnail(`${member..displayAvatarURL}`)
-        .addField('Joined at:', `${moment.utc(member..joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
-        .addField('Status:', member..presence.status, true)
+        .addField('Joined at:', `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('Status:', member.presence.status, true)
         .addField('Roles:', member.roles.map(r => `${r}`).join(' | '), true)
         .setFooter(`ID: ${member.id}`)
         .setTimestamp();
