@@ -4,17 +4,17 @@ const moment = require('moment');
 module.exports.run = async (bot, message, args) => {
 
     let member = message.mentions.users.first() || message.author;
-    const joinDiscord = moment(member.createdAt).format('llll');
-    const joinServer = moment(member.joinedAt).format('llll');
+    const joinDiscord = moment(user.createdAt).format('llll');
+    const joinServer = moment(user.joinedAt).format('llll');
     let embed = new Discord.RichEmbed()
-        .setAuthor(member.username + '#' + member.discriminator, member.displayAvatarURL)
-        .setDescription(`${member}`)
+        .setAuthor(user.username + '#' + user.discriminator, user.displayAvatarURL)
+        .setDescription(`${user}`)
         .setColor(`RANDOM`)
-        .setThumbnail(`${member.displayAvatarURL}`)
+        .setThumbnail(`${user.displayAvatarURL}`)
         .addField('Joined at:', `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
-        .addField('Status:', member.presence.status, true)
-        .addField('Roles:', member.roles.map(r => `${r}`).join(' | '), true)
-        .setFooter(`ID: ${member.id}`)
+        .addField('Status:', user.presence.status, true)
+        .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
+        .setFooter(`ID: ${user.id}`)
         .setTimestamp();
 
     message.channel.send({ embed: embed });
