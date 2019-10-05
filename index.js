@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
+const { prefix, prefix2, token } = require('./config.json');
 const client = new Discord.Client();
 const fs = require("fs");
 client.commands = new Discord.Collection();
@@ -31,7 +31,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
     console.log(`${message.author.tag}(ID:${message.author.id}): ${message.content}`);
-    if (!message.content.startsWith(prefix)) return;
+    if (!message.content.startsWith(prefix, prefix2)) return;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
