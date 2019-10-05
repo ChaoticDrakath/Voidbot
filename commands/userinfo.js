@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     const joinDiscord = moment(member.createdAt).format('llll');
     const joinServer = moment(member.joinedAt).format('llll');
     let embed = new Discord.RichEmbed()
-        .setAuthor(member..username + '#' + member.discriminator, member..displayAvatarURL)
+        .setAuthor(member.username + '#' + member.discriminator, member.displayAvatarURL)
         .setDescription(`${member}`)
         .setColor(`RANDOM`)
         .setThumbnail(`${member..displayAvatarURL}`)
