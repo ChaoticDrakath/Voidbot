@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail(`${user.displayAvatarURL}`)
         .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
         .addField('Status:', user.presence.status, true)
-        .addField('Roles:', members.roles.map(r => `${r}`).join(' | '), true)
+        .addField('Roles:', GuildMember.roles.map(r => `${r}`).join(' | '), true)
         .setFooter(`ID: ${user.id}`)
         .setTimestamp();
 
