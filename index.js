@@ -32,7 +32,6 @@ client.once('ready', () => {
 client.on('message', message => {
     console.log(`${message.author.tag}(ID:${message.author.id}): ${message.content}`);
     if (!message.content.startsWith(prefix)) return;
-    if (!message.content.toLowerCase(prefix)) return;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
