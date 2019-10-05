@@ -2,8 +2,6 @@ const Discord = require("discord.js");
 const ms = require("ms");
 module.exports.run = async (client, message, args) => {
 
-  let userID = '<@629572868362993664>'
-  if(!message.author === userID) return;
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if(!tomute) return message.reply("Couldn't find user.");
