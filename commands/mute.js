@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const ms = require("ms");
 module.exports.run = async (client, message, args) => {
 
-  if(!message.member.hasPermission("KICK_MEMBERS", "BAN_MEMBERS")) {
+  if (message.member.hasPermission("KICK_MEMBERS", "BAN_MEMBERS")) {
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if(!tomute) return message.reply("Couldn't find user.");
   if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
