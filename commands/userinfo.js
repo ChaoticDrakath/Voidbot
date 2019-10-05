@@ -4,7 +4,6 @@ const moment = require('moment');
 module.exports.run = async (bot, message, args) => {
 
     let user = message.mentions.members.first() || message.author;
-    let member = message.mention.members.first() || message.author;
     const joinDiscord = moment(user.createdAt).format('llll');
     const joinServer = moment(user.joinedAt).format('llll');
     let embed = new Discord.RichEmbed()
