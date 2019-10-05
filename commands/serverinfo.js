@@ -15,7 +15,7 @@ if (message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS'])) {
             .addField("Total Members", message.guild.memberCount);
         
             return message.channel.send(serverembed);
-           }
+           }else message .channel.send("You don't have required permissions to access this command!");
 }
 
 module.exports.help = {
