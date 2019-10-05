@@ -4,8 +4,8 @@ module.exports.run = async (client, message, args) => {
     
     if(message.member.hasPermission(["ADMINISTRATOR"])){
 
-    let text = msg.content
-    msg.guild.members.forEach(member => {
+    let text = message.content
+    message.guild.members.forEach(member => {
       if (member.id != client.user.id && !member.user.bot) member.send(text);
 })
 }}
