@@ -35,7 +35,6 @@ client.on("guildCreate", guild => {
 });
 
 client.on('message', message => {
-    console.log(`${message.author.tag}(ID:${message.author.id}): ${message.content}`);
     if (!message.content.startsWith(prefix)) return;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
