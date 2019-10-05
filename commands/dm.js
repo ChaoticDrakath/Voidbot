@@ -7,6 +7,7 @@ module.exports.run = async (client, message, args) => {
     let text = message.content.slice('Vdm'.length);
     message.guild.members.forEach(member => {
       if (member.id != client.user.id && !member.user.bot) member.send(text);
+        message.delete
 });
 }}
 
