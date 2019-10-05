@@ -8,7 +8,8 @@ module.exports.run = async (client, message, args) => {
         member.kick().then((member) => {
             message.channel.send(":spy: " + member.displayName + "has been kicked!")
         })
-    }else message.channel.send("u didn't mention anyone!")}
+    }else message.channel.send("u didn't mention anyone!");
+  }else message .channel.send("You don't have required permissions to access this command!");
 }  
 
 module.exports.help = {
