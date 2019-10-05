@@ -29,6 +29,11 @@ client.once('ready', () => {
     client.user.setActivity("Vhelp", {type: "STREAMING"});
 })
 
+client.on("guildCreate", guild => {
+   guild.owner.send('Thanks! You can use Vhelp to discover commands.')
+   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+});
+
 client.on('message', message => {
     console.log(`${message.author.tag}(ID:${message.author.id}): ${message.content}`);
     if (!message.content.startsWith(prefix)) return;
