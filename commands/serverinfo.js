@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
            
-if(message.member.hasPermission(["ADMINISTRATOR"])){
+if(message.member.hasPermission(["MANAGE_MESSAGES"])){
 
             let sicon = message.guild.iconURL;
             let serverembed = new Discord.RichEmbed()
