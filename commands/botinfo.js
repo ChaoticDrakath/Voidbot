@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
 
     let bicon = client.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
-    .setDescription("This command shows Information about VoidGuard.")
+    .setDescription("This command shows Information about this bot.")
     .setColor("#980aab")
     .setThumbnail(bicon)
     .addField("Bot Name", client.user.username)
