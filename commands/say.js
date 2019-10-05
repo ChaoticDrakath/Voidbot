@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
     
-    if (message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS'])) {
+    if (message.member.hasPermission(['SEND_MESSAGES'])) {
 
     let argsresult;
     let mChannel = message.mentions.channels.first()
