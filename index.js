@@ -1,11 +1,13 @@
 const { Discord, Client, Collection } = require("discord.js");
 const { prefix, token } = require('./config.json');
 const fs = require("fs");
-client.commands = new Discord.Collection();
 
 const client = new Client({
     disableEveryone: true
 });
+
+client.commands = new Collection();
+client.aliases = new Collection();
 
 fs.readdir("./commands/", (err, files) => {
 
